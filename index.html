@@ -1,25 +1,17 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
-		<title>reveal.js - The HTML Presentation Framework</title>
-
+		<title>Looking into some of the joys of SVGs</title>
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-
+		<meta name="author" content="Michael Senkow">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-
+		<link rel="stylesheet" href="css/theme/ap.css">
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -28,352 +20,434 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+					<h1>SVG Animations</h1>
+					<h3>Michael Senkow</h3>
+					<p></p>
 				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h1>Raster Images (png)</h1>
+						<img width="32" height="32" data-src="images/cut_64.png">
+						<img width="64" height="64" data-src="images/cut_64.png">
+						<img width="128" height="128" data-src="images/cut_64.png">
+						<img width="256" height="256" data-src="images/cut_64.png">
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
+						<h3>Really, Next to Useless</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+8950 4e47 0d0a 1a0a 0000 000d 4948 4452
+0000 0040 0000 0040 0806 0000 00aa 6971
+de00 0000 0970 4859 7300 000b 1300 000b
+1301 009a 9c18 0000 0019 7445 5874 536f
+6674 7761 7265 0041 646f 6265 2049 6d61
+6765 5265 6164 7971 c965 3c00 0002 2a49
+4441 5478 daec 9bd1 6d83 3010 8671 c47b
+3302 1b24 1b94 6ec0 0665 848e 4036 e808
+ee06 1981 11c8 0619 814e 40cf d245 b21c
+174c 88cf 1738 4b27 458e 09f6 77be f3f9
+afaa 8661 c8b6 dc76 d9c6 1b39 00a5 540d
+d682 0d8e 99be 9a9c 8009 010a 8356 8075
+e695 1366 c614 54f3 5214 3900 3c7b 5bfc
+5be0 23bf 6047 98db 752d 2170 9eb1 f80c
+c79e 5791 0330 ae0f 1e0f 9fc0 3ed0 4ed8
+67b7 0349 4e20 88fd d689 f11e b7b7 3bee
+88df d963 dbe8 f323 00e0 26b9 6664 6ce3
+8e8f 3dbf 5de4 edbf f774 b723 8fb4 5208
+ad09 006c b1de d35d 8e3c 52ae ae10 e29e
+0473 02c6 1aec dd39 e34d d9fb 6dc5 bcf1
+fc97 a756 d0d1 8f69 a24a b0f3 d402 53ed
+0273 3bae 2509 569e 4267 aa14 ae56 730a
+604d 6fbc 7909 f13c d53d 80f4 3668 25bb
+da93 1807 ecab a9e7 a352 2942 4603 701c
+a144 1112 0002 4000 0800 2e00 d8a9 b754
+7540 46a4 de52 0b1f 418a 102e be0f 58bc
+7db3 2b66 2cda 94b7 d719 bfbf c4f4 2300
+ba07 5ed4 cd58 fc40 6c3a 1800 96a8 3e0f
+3778 5d2d f1b3 6f87 d401 00ae 56e8 5468
+5d6a 0824 c205 b4bd 35b6 4ab0 2b74 0880
+45ea ed0c ab12 8585 fe17 80e3 a19b 9523
+00ca 0513 a10e 8151 0829 00a4 367d f777
+8197 506f 9fd7 3ea1 90d3 7785 506c f576
+ca33 a90a a1fc 55d4 5b12 5538 a67a eb2a
+409e 929c 8522 c456 bd25 01c0 5abd a556
+859f adde 724d 8264 aaf0 abe4 0051 8404
+8000 1000 0240 0008 0001 2000 0480 0010
+0002 e0c9 ed67 d300 e0ba 5b73 8440 1a02
+1c21 90e7 006e 1092 2441 4e10 929d 025c
+2024 3d06 3940 c853 7bc0 4050 4a25 7bbf
+92ff 1edf 78fb 1360 009b da30 6920 4f9a
+3b00 0000 0049 454e 44ae 4260 82
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
+					</section>
+					<section>
+						<h1>Vector Images (svg)</h1>
+						<img width="32" height="32" data-src="images/cut_large.svg">
+						<img width="64" height="64" data-src="images/cut_large.svg">
+						<img width="128" height="128" data-src="images/cut_large.svg">
+						<img width="256" height="256" data-src="images/cut_large.svg">
+					</section>
+					<section>
+						<h3>Displays the more generative nature of SVGs</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="128px" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<path d="M108,52H68V35.476C74.896,33.696,80,27.452,80,20c0-8.836-7.164-16-16-16s-16,7.164-16,16c0,7.452,5.104,13.696,12,15.476
+	V52c-4.422,0-8,3.58-8,8H35.476C33.696,53.103,27.452,48,20,48c-8.836,0-16,7.164-16,16s7.164,16,16,16
+	c7.452,0,13.696-5.103,15.476-12H52v40l16,16V68h56L108,52z M20,72c-4.414,0-8-3.582-8-8s3.586-8,8-8s8,3.582,8,8S24.414,72,20,72z
+	 M60,64c-2.211,0-4-1.791-4-4s1.789-4,4-4c2.207,0,4,1.791,4,4S62.207,64,60,64z M64,28c-4.414,0-8-3.582-8-8s3.586-8,8-8
+	s8,3.582,8,8S68.414,28,64,28z"/>
+</svg>
 					</code></pre>
+					</section>
+					<section>
+						<h3>When pulling from Illustrator you'll end up with a fair amount of extra fluff.</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg x="0px" y="0px" width="128px" height="128px" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<path d="M108,52H68V35.476C74.896,33.696,80,27.452,80,20c0-8.836-7.164-16-16-16s-16,7.164-16,16c0,7.452,5.104,13.696,12,15.476
+	V52c-4.422,0-8,3.58-8,8H35.476C33.696,53.103,27.452,48,20,48c-8.836,0-16,7.164-16,16s7.164,16,16,16
+	c7.452,0,13.696-5.103,15.476-12H52v40l16,16V68h56L108,52z M20,72c-4.414,0-8-3.582-8-8s3.586-8,8-8s8,3.582,8,8S24.414,72,20,72z
+	 M60,64c-2.211,0-4-1.791-4-4s1.789-4,4-4c2.207,0,4,1.791,4,4S62.207,64,60,64z M64,28c-4.414,0-8-3.582-8-8s3.586-8,8-8
+	s8,3.582,8,8S68.414,28,64,28z"/>
+</svg>
+					</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Thinking through some of the base shapes, understanding how they're formed helps think about how to animate them.</h3>
+					</section>
+					<section>
+						<h4>Rectangles</h4>
+						<p>X,Y,Width,Height</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+  						<rect x="400" y="100" width="400" height="200"/>
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+	<rect x="400" y="100" width="400" height="200"/>
+</svg>
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Rounded Rectangles</h4>
+						<p>X,Y,Width,Height,RX,RY</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+  						<rect x="400" y="100" width="400" height="200" rx="20" ry="20"/>
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+	<rect x="400" y="100" width="400" height="200" rx="20" ry="20"/>
+</svg>
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Circles</h4>
+						<p>CX,CY,R</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+  						<circle cx="600" cy="200" r="100" />
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+	<circle cx="600" cy="200" r="100" />
+</svg>
+						</code></pre>
+					</section>
+					<section>
+						<h4>Ellipses</h4>
+						<p>CX,CY,RX,RY</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+  						<ellipse cx="600" cy="200" rx="100" ry="50"/>
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+	<ellipse cx="600" cy="200" rx="100" ry="50"/>
+</svg>
+						</code></pre>
+					</section>
+					<section>
+						<h4>Lines</h4>
+						<p>X1,Y1,X2,Y2 (stroke color and width)</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+						<g stroke="#152935" >
+	  						<line x1="100" y1="300" x2="300" y2="100"
+						            stroke-width="5"  />
+						    <line x1="300" y1="300" x2="500" y2="100"
+						            stroke-width="10"  />
+						    <line x1="500" y1="300" x2="700" y2="100"
+						            stroke-width="15"  />
+						    <line x1="700" y1="300" x2="900" y2="100"
+						            stroke-width="20"  />
+						    <line x1="900" y1="300" x2="1100" y2="100"
+						            stroke-width="25"  />
+						</g>
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+<g stroke="#152935" >
+	<line x1="100" y1="300" x2="300" y2="100"
+            stroke-width="5"  />
+    	<line x1="300" y1="300" x2="500" y2="100"
+            stroke-width="10"  />
+    	<line x1="500" y1="300" x2="700" y2="100"
+            stroke-width="15"  />
+    	<line x1="700" y1="300" x2="900" y2="100"
+            stroke-width="20"  />
+    	<line x1="900" y1="300" x2="1100" y2="100"
+            stroke-width="25"  />
+</g>
+</svg>
+						</code></pre>
+					</section>
+					<section>
+						<h4>Polyline</h4>
+						<p>Points</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+						<polyline fill="none" stroke="#152935" stroke-width="5" 
+				            points="50,375
+				                    150,375 150,325 250,325 250,375
+				                    350,375 350,250 450,250 450,375
+				                    550,375 550,175 650,175 650,375
+				                    750,375 750,100 850,100 850,375
+				                    950,375 950,25 1050,25 1050,375
+				                    1150,375" />
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+	<polyline fill="none" stroke="#152935" stroke-width="5" 
+				            points="50,375
+				                    150,375 150,325 250,325 250,375
+				                    350,375 350,250 450,250 450,375
+				                    550,375 550,175 650,175 650,375
+				                    750,375 750,100 850,100 850,375
+				                    950,375 950,25 1050,25 1050,375
+				                    1150,375" />
+</svg>
+						</code></pre>
+					</section>
+					<section>
+						<h4>Polygon</h4>
+						<p>Points</p>
+						<svg width="6in" height="2in" viewBox="0 0 1200 400" style="background:white;">	
+						<polygon points="850,75 958,137.5 958,262.5 850,325 742,262.6 742,137.5" />
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+<polygon points="850,75 958,137.5 958,262.5 850,325 742,262.6 742,137.5" />
+</svg>
+						</code></pre>
+					</section>
+
+				</section>
+				<section>
+					<section>
+						<h3>PATHS!</h3>
+					</section>
+					<section>
+						<h4>Different code for the same shape.</h4>
+						<p>Path</p>
+						<svg width="6in" height="2in" viewBox="0 0 432 144" style="background:white;">	
+						<path d="M123.8,122.9C95.7,122.9,73,100.1,73,72s22.8-50.9,50.9-50.9s50.9,22.8,50.9,50.9S151.9,122.9,123.8,122.9z"/>
+						<circle cx="308.2" cy="72" r="50.9"/>
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg width="6in" height="2in" viewBox="0 0 1200 400">
+	<path d="M123.8,122.9C95.7,122.9,73,100.1,73,72s22.8-50.9,50.9-50.9s50.9,22.8,50.9,50.9S151.9,122.9,123.8,122.9z"/>
+	<circle cx="308.2" cy="72" r="50.9"/>
+</svg>
+						</code></pre>
+					</section>
+					<section>
+						<h4>And of course, more complicated shapes.</h4>
+						<svg  width="256px" height="256px" viewBox="0 0 32 32" style="background:white;">	
+						<path d="M27,13H17V8.858C18.722,8.412,20,6.861,20,5c0-2.209-1.791-4-4-4s-4,1.791-4,4c0,1.861,1.278,3.412,3,3.858V13
+	c-1.106,0-2,0.895-2,2H8.858C8.412,13.278,6.861,12,5,12c-2.209,0-4,1.791-4,4s1.791,4,4,4c1.861,0,3.412-1.278,3.858-3H13v10l4,4
+	V17h14L27,13z M5,18c-1.103,0-2-0.896-2-2s0.897-2,2-2s2,0.896,2,2S6.103,18,5,18z M15,16c-0.553,0-1-0.448-1-1s0.447-1,1-1
+	c0.552,0,1,0.448,1,1S15.552,16,15,16z M16,7c-1.104,0-2-0.896-2-2s0.896-2,2-2s2,0.895,2,2S17.104,7,16,7z"/>
+						</svg>
+						<pre><code class="hljs" data-trim contenteditable>
+<svg  width="256px" height="256px" viewBox="0 0 32 32">
+	<path d="M27,13H17V8.858C18.722,8.412,20,6.861,20,5c0-2.209-1.791-4-4-4s-4,1.791-4,4c0,1.861,1.278,3.412,3,3.858V13
+	c-1.106,0-2,0.895-2,2H8.858C8.412,13.278,6.861,12,5,12c-2.209,0-4,1.791-4,4s1.791,4,4,4c1.861,0,3.412-1.278,3.858-3H13v10l4,4
+	V17h14L27,13z M5,18c-1.103,0-2-0.896-2-2s0.897-2,2-2s2,0.896,2,2S6.103,18,5,18z M15,16c-0.553,0-1-0.448-1-1s0.447-1,1-1
+	c0.552,0,1,0.448,1,1S15.552,16,15,16z M16,7c-1.104,0-2-0.896-2-2s0.896-2,2-2s2,0.895,2,2S17.104,7,16,7z"/>
+</svg>
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Fills and Strokes!</h3>
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="RWZbxy" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/RWZbxy/'>RWZbxy</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="EVvYEZ" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/EVvYEZ/'>EVvYEZ</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="OyjLwd" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/OyjLwd/'>OyjLwd</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="vNJBQa" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/vNJBQa/'>vNJBQa</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Animations!</h3>
+					</section>
+					<section>
+						<h3>Fills and Strokes!</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="WQEeqb" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/WQEeqb/'>WQEeqb</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3>Widths</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="meMdbv" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/meMdbv/'>meMdbv</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3>Caps</h3>
+						<h4>Doesn't work in Firefox/Safari</h4>
+						<p data-height="600" data-theme-id="0" data-slug-hash="OyjJJe" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/OyjJJe/'>OyjJJe</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3>Dash Array Lengths</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="zvdYxd" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/zvdYxd/'>zvdYxd</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3>Which can combine nicely with dashoffset</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="WQENvv" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/WQENvv/'>WQENvv</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3>And then expand further with a combination to an animation to the svg container</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="YyqQKe" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/YyqQKe/'>YyqQKe</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3>And then expand further with a combination to an animation to the svg container</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="KdvKMg" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/KdvKMg/'>KdvKMg</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<p>Now, this was all purely css animation work, not SMIL
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="VvzwKV" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/VvzwKV/'>VvzwKV</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3><a href="http://snapsvg.io/">Snap Svg</a></h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="Mavepm" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/Mavepm/'>Mavepm</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<h3><a href="http://snapsvg.io/">Background Example</a></h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="XbjYjR" data-default-tab="result" data-user="allanpope" class='codepen'>See the Pen <a href='http://codepen.io/allanpope/pen/XbjYjR/'>Animated Rainbow Zig Zag</a> by Allan Pope (<a href='http://codepen.io/allanpope'>@allanpope</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="XJogMg" data-default-tab="result" data-user="HamishMW" class='codepen'>See the Pen <a href='http://codepen.io/HamishMW/pen/XJogMg/'>SVG Animation Experiment</a> by Hamish Williams (<a href='http://codepen.io/HamishMW'>@HamishMW</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="wKebE" data-default-tab="result" data-user="juhana" class='codepen'>See the Pen <a href='http://codepen.io/juhana/pen/wKebE/'>KEKK</a> by juhana (<a href='http://codepen.io/juhana'>@juhana</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="meMEjb" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/meMEjb/'>meMEjb</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="WvORge" data-default-tab="result" data-user="jessenwells" class='codepen'>See the Pen <a href='http://codepen.io/jessenwells/pen/WvORge/'>SVG Star Transformation</a> by Jesse Wells (<a href='http://codepen.io/jessenwells'>@jessenwells</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
 				</section>
 
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
+					<section>
+						<h3>Inpirational Examples</h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="VvWqgP" data-default-tab="result" data-user="chrisgannon" class='codepen'>See the Pen <a href='http://codepen.io/chrisgannon/pen/VvWqgP/'>SVG Burger Menu</a> by Chris Gannon (<a href='http://codepen.io/chrisgannon'>@chrisgannon</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+					<section>
+						<a href="http://codepen.io/SaraSoueidan/pen/cbc1297bc2b4b10492829aacefb0c517">Sara Souidan Responsive SVG Example</a>
+						<p data-height="600" data-theme-id="0" data-slug-hash="rOzeXy" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/rOzeXy/'>rOzeXy</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+					<section>
+						<p data-height="600" data-theme-id="0" data-slug-hash="jEGbA" data-default-tab="result" data-user="aurer" class='codepen'>See the Pen <a href='http://codepen.io/aurer/pen/jEGbA/'>SVG Loading icons</a> by Aurer (<a href='http://codepen.io/aurer'>@aurer</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+
+					<section>
+						<h3>Could the animation itself be responsive?....</h3>
+					<p data-height="600" data-theme-id="0" data-slug-hash="pjryoY" data-default-tab="result" data-user="mhsenkow" class='codepen'>See the Pen <a href='http://codepen.io/mhsenkow/pen/pjryoY/'>pjryoY</a> by Michael Senkow (<a href='http://codepen.io/mhsenkow'>@mhsenkow</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+
+					<section>
+					<h3>Inspiration for work with Data-Visualization</h3>
+					<p data-height="600" data-theme-id="0" data-slug-hash="jvCLe" data-default-tab="result" data-user="JonasB" class='codepen'>See the Pen <a href='http://codepen.io/JonasB/pen/jvCLe/'>Line graph animation</a> by Jonas Badalic (<a href='http://codepen.io/JonasB'>@JonasB</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					</section>
+				
 				</section>
 
 				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
+					<section>
+						<h3><a href="http://julian.com/research/velocity/">Velocity JS</a></h3>
+						<p data-height="600" data-theme-id="0" data-slug-hash="VYgBVG" data-default-tab="result" data-user="manussakis" class='codepen'>See the Pen <a href='http://codepen.io/manussakis/pen/VYgBVG/'>SVG Animation with Velocity.js</a> by Gabriel (<a href='http://codepen.io/manussakis'>@manussakis</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+					
+					</section>
+				
 				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+				
+				<section>
+				<ul>
+				<li><a href="http://www.w3.org/TR/SVG/">Base W3.org Site</a>	</li>
+				<li><a href="https://css-tricks.com/guide-svg-animations-smil/">SVG Animation Examples</a></li>
+				<li><a href="https://css-tricks.com/svg-line-animation-works/">SVG Line Animations</a></li>
+				<li><a href="http://lazylinepainter.info/">Lazy Line Painter</a></li>
+				<li><a href="http://slides.com/sarasoueidan/">Sara Soueidan Presentations</a></li>
+				<li><a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/">Sara Soueidan - Styling SVG via Use</a></li>
+				<li><a href="http://tympanus.net/codrops/2015/09/23/elastic-progress/">Tympanus Elastic</a></li>
+				<li><a href="http://tympanus.net/codrops/2015/09/14/creating-material-design-ripple-effects-svg/">Tympanus Material</a></li>
+				<li><a href="http://snapsvg.io/">Snap SVG</a>	</li>
+				<li><a href="https://github.com/ConnorAtherton/walkway">Walkway (for lines)</a>	</li>
+				<li><a href="http://raphaeljs.com/">Raphael</a>	</li>
+				<ul>
 				</section>
+				
+				
 
 			</div>
 
@@ -381,20 +455,13 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
 		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
-
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
@@ -404,8 +471,6 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
 		</script>
-
 	</body>
 </html>
